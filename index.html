@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>AI Project Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<div class="container">
+  <h1>AI-Powered Dev Project Ideas</h1>
+  <form id="projectForm">
+    <label>
+      Language:
+      <input type="text" name="language" required placeholder="e.g. Python, Java, JavaScript">
+    </label>
+    <label>
+      Skill Level:
+      <select name="skillLevel" required>
+        <option value="">-- Select --</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+    </label>
+    <label>
+      Timeframe:
+      <input type="text" name="timeframe" required placeholder="e.g. 2 weeks, 1 month">
+    </label>
+    <button type="submit">Generate Projects</button>
+  </form>
+
+  <div id="results" class="hidden">
+    <h2>Project Ideas</h2>
+    <div id="ideaList"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
